@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Tip calculator app</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <label for="bill" class="font_1">Bill</label>
+        <!-- <img src="/tip-calculator-app-main/images/dollar-currency-symbol.png" class="icon" alt=""> -->
+        <input value="0" type="text" id="bill" name="bill" class="input_1" autocomplete="on" required/>
+        <p class="font_1">Select Tip (%)</p>
+        <div class="btn_container">
+          <button class="btn btn_tip" value="0.5">5%</button>
+          <button class="btn btn_tip" value="0.10">10%</button>
+          <button class="btn btn_tip" value="0.15">15%</button>
+          <button class="btn btn_tip" value="0.25">25%</button>
+          <button class="btn btn_tip" value="0.50">50%</button>
+          <form name="myForm" action="" onsubmit="validateForm()">
+            <input class="btn btn_tip btn_tip_curtom" name="custom" onblur="getCustomTip()" placeholder="Custom">
+          </form>
+        </div>
+        <label for="people" class="font_1">Number of People</label>
+        <input value="1" type="text" name="people" id="people" class="input_1">
+      </div>
+      <div class="display_box">
+        <div class="box">
+          <div class="tip_amount">
+            <p class="font_1">Tip Amount <br> <span class="font_2">/ Person</span></p>
+            <h1 class="tip_amount_per_person">$0.00</h1>
+          </div>
+          <div class="tip_amount total">
+            <p class="font_1">Total <br> <span class="font_2">/ Person</span></p>
+            <h1 class="bill_amount_total_per_person">$0.00</h1>
+          </div>
+          <button class="btn btn_primary" type="submit">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+
+    <script src="index.js"></script>
+  </body>
+</html>
